@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Noofel</title>
+  </head>
+  <body>
+    <header class="header">
+    <nav class="header group">
+      <h1 class="header-logo"><a href="#"><span class="blue">N</span><span class="red">o</span><span class="yellow">o</span><span class="blue">f</span><span class="green">e</span><span class="red">l</span></a></h1>
+
+      <form class="search" action="#/searches" method="get">
+        <div class="header-search-bar group">
+            <input class="query" name="query" type="text" >
+            <button class="searchsubmit" >Search</button>
+        </div>
+
+      </form>
+
+      <ul class="header-list-group">
+        <li><a href="#">You</a></li>
+        <li><span class="icon-grid"></span></li>
+        <li><span class="notifications"></span></li>
+        <li  onclick="toggleProfileDropDown()"><span class="profile-icon">
+           <div class="profileDropdown" style="display: none;">
+             <form class="sign-out" action="<%= session_url %>" method="post">
+               <input type="hidden"
+                      name="authenticity_token"
+                      value="<%= form_authenticity_token %>">
+               <input type="hidden" name="_method" value="delete">
+               <input type="submit" value="Sign Out">
+             </form>
+           </div>
+           </span>
+        </li>
+      </ul>
+    </nav>
+
+    </header>
+
+    <main class="window group">
+    <header class="functionality">
+      <nav class="functionality-menu group">
+         <div class="functionality-logo">
+           <h2>Mail</h2>
+         </div>
+
+         <ul class="functionality-menu-list group">
+           <li><button class="mark"><input onclick="checkAll()" type="checkbox"> &#x25BE;</button></li>
+           <li><button class="refresh" name="refresh">Refresh</button></li>
+           <li><button type="button" name="button">More &#x25BE;</button></li>
+         </ul>
+
+         <ul class="functionality-pagination-settings group">
+           <li><button class="prevpage" type="button" name="button"><</button></li>
+           <li><button class="nextpage" type="button" name="button">></button></li>
+           <li><button type="button" name="button">Settings &#x25BE;</button></li>
+         </ul>
+      </nav>
+    </header>
+
+    <section class="sidebar">
+    <a href="#/emails/new"><button type="button" class="compose">COMPOSE</button></a>
+
+    <ul class="folder">
+      <li class="selected"><a href="#"><strong>Inbox <% if current_user.inbox_count != 0 %> (<%= current_user.inbox_count %>) <% end %> </strong></a></li>
+      <li ><a href="#/starred_emails">Starred</a></li>
+      <li ><a href="#/important_emails">Important</a></li>
+      <li ><a href="#/sent_emails">Sent Mail</a></li>
+      <li ><a href="#/draft_emails"><strong>Drafts <% if current_user.draft_count != 0 %> (<%= current_user.draft_count %>) <% end %></strong></a></li>
+
+      <li onclick="toggleMoreMenu()" id="more"><a >More &#x25BE;</a></li>
+      <li class="more-menu" style="display: none"><a href="#">Chats</a></li>
+      <li class="more-menu" style="display: none"><a href="#/all_emails">All Mail</a></li>
+      <li class="more-menu" style="display: none"><a href="#/spam_emails"><strong>Spam</strong</a></li>
+      <li class="more-menu" style="display: none"><a href="#/trash_emails">Trash</a></li>
+    </ul>
+    <table class="contacts">
+      <th colspan="2">
+        Contacts
+      </th>
+    <% @users.each_with_index do |user, index| %>
+      <tr>
+        <td><%= index +=1 %></td>
+        <td><%= user.email.split("@")[0] %></td>
+        <td><%= link_to "Chat", "#", class: "btn btn-success btn-xs start-conversation",
+                "data-sid" => current_user.id, "data-rip" => user.id %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+
+
+    </section>
+
+    <section class="main">
+    <!-- <h1>Hello <%= current_user.email %> </h1> -->
+    </section>
+    </main>
+
+
+  </body>
+</html>
+
+<script type="text/javascript">
+
+   function toggleMoreMenu(){
+     if($('#more').text() == "Less \u25B4"){
+       $('#more').html("<a>More \u25BE</a>");
+     }else{
+       $('#more').html("<a>Less \u25B4</a>");
+     }
+     $('.more-menu').toggle();
+   };
+
+   function toggleProfileDropDown(){
+     $('.profileDropdown').toggle();
+   }
+
+   function checkAll(){
+
+     for( var i = 0; i < $('.checkbox').length; i++ ){
+
+     }
+
+   }
+</script>

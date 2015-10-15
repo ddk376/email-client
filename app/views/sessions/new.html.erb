@@ -1,0 +1,26 @@
+<div class="login-main">
+  <canvas id="canvas" width="96" height="96"></canvas>
+<form class="login" action="<%= session_url %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input name="user[email]" type="text" value="Enter your Email"
+        onfocus="if (this.value =='Enter your Email') this.value='';"
+        onfocusout="if (this.value =='') this.value='Enter your Email';"><br>
+  <input name="user[password]" type="password" value=""><br>
+  <input type="submit" value="Submit"><br>
+</form>
+
+
+</div>
+<div class="demo">
+<form class="demo-user" action="<%= session_url %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input name="user[email]" type="hidden" value="test1@test.com">
+  <input name="user[password]" type="hidden" value="password"><br>
+  <input type="submit" value="Demo User"><br>
+</form>
+<a href="/users/new">Create account</a>
+</div>

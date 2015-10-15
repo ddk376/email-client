@@ -1,0 +1,2 @@
+module AllEmailsHelper
+end

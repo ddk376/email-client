@@ -1,0 +1,125 @@
+// Place all the styles related to the Emails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// html, body, header, footer, table, nav, main, section, textarea,
+// ul,h1, h2,li, input, strong, a {
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   outline: 0;
+//
+//   font: inherit;
+//   text-decoration: inherit;
+//   text-align: inherit;
+//   color: inherit;
+//   box-sizing: inherit;
+//
+//   background: transparent;
+// }
+
+body{
+  font-family: Arial, sans-serif;
+}
+
+.email-show {
+  padding: 15px 0;
+  list-style: none;
+  width: 97%;
+  border-bottom: 1px solid #ccc;
+  background: #e5e5e5
+}
+
+.unread{
+  background: #fff;
+}
+.email-show li {
+  display: block;
+  float: left;
+}
+
+.checkbox, .star, .important {
+  padding: 0 5px;
+}
+
+.email-show {
+  cursor: pointer;
+}
+
+.email-show-render > h1 {
+  padding-top: 10px;
+  font-size: 24px;
+}
+
+.email-show-render hr {
+  width: 80%;
+  float: left;
+  font-weight: lighter;
+}
+
+.email-show-render-body {
+  width: 78%
+}
+
+.email-show .from{
+  display: block;
+  width: 15%;
+}
+
+.email-show .subject_body{
+  display: block;
+  width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.email-show .paperclip{
+  display: block;
+   width: 5%;
+}
+
+.email-show .date_time{
+  float: right;
+  display: block;
+  width: 5%;
+  padding: 0 10px;
+}
+.grey {
+  display: inline;
+  color: #aaa;
+}
+input[type=checkbox]{
+  border-radius: 0;
+}
+
+.star-five{
+  padding-right: 10px;
+}
+
+.important {
+  padding-right: 10px;
+}
+
+
+.create-email {
+  display: block;
+  height: 20%;
+  width: 50%;
+}
+.create-email .to,
+.create-email .cc,
+.create-email .bcc,
+.create-email .subject{
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #ccc;
+}
+.create-email label {
+  display: table-cell;
+  width: 10px;
+  padding: 10px;
+}
+.create-email input{
+  padding: 10px 0;
+  width: 100%;
+}

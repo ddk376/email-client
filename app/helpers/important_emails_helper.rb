@@ -1,0 +1,2 @@
+module ImportantEmailsHelper
+end

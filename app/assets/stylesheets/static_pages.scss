@@ -1,0 +1,570 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, header, footer, table, nav, main, section, textarea,
+ul,h1, h2,li, input, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  box-sizing: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header.header {
+  height: 60px;
+  border-bottom: 1px solid #e5e5e5;
+  display: block;
+}
+
+header.header nav.header {
+  height: 59px;
+  background-color: rgb(237,237,237);
+  border-bottom: 1px solid #e5e5e5;
+}
+.header-logo{
+  font-weight: normal;
+  font-size: 32px;
+  float: left;
+  position: relative;
+  top: 10px;
+  padding-left: 25px;
+}
+.blue{
+  color: rgb(52, 108, 241);
+}
+.red {
+  color: rgb(224, 47, 37);
+}
+.yellow {
+  color: rgb(249, 175, 11);
+}
+.green{
+  color: rgb(49, 153, 59);
+}
+.header-search-bar{
+  float: left;
+}
+
+.header-list-group{
+  padding: 20px;
+  float: right;
+}
+
+.header-list-group > li{
+  float: left;
+}
+
+.header-search-bar {
+    position: relative;
+    top: 15px;
+    left: 85px;
+    margin: auto;
+    width: 580px;
+  }
+.header-search-bar > input {
+    background: #fff;
+    box-sizing: border-box;
+    width: 530px;
+    height: 28px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+  }
+.searchsubmit {
+  position: relative;
+
+  padding: 8px 4px;
+   float: right;
+}
+.header-search-bar > input:hover {
+    border-color: #000;
+  }
+.header-search-bar> input:focus {
+    border-color: #06f;
+  }
+
+.icon-grid {
+    display: block;
+    position: relative;
+    background: #777;
+    margin: 0 7px 0 25px;
+    width: 16px;
+    height: 16px;
+}
+.icon-grid:hover {
+  background: #333;
+}
+.icon-grid:after,
+.icon-grid:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #fff;
+}
+.icon-grid:before {
+  top: 0;
+  left: 4px;
+  width: 4px;
+  height: 16px;
+  border-top: 0;
+  border-bottom: 0;
+}
+.icon-grid:after {
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 4px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.notifications {
+  display: block;
+  position: relative;
+  background: #777;
+  margin: 0 7px 0 15px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+.notifications:hover {
+  background: #333;
+}
+
+.profile-icon {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background: asset-url(icon);
+  background-size: 100%;
+}
+
+.profileDropdown{
+  z-index: 2;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: rgba(0,0,0,.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  right: 0;
+  top: 44px;
+  width: 273px;
+  height: 185px;
+}
+
+.profile-icon:hover .dropdown {
+  display: block;
+}
+.empty-category-message {
+  display: block;
+  width: 95%;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#more {
+  cursor: pointer;
+}
+main.window {
+
+  // border: 5px solid black;
+}
+
+.window .functionality{
+
+  display: block;
+  height: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.functionality-menu{
+  display: block;
+}
+.functionality-logo {
+  display: block;
+  width: 180px;
+  position: relative;
+  top: 10px;
+}
+
+.functionality-menu-list{
+  display: block;
+  width: auto;
+  float: left;
+  position: relative;
+  top: 10px;
+}
+
+.functionality-menu-list > li{
+  float: left;
+
+}
+.functionality-menu-list > li > button {
+  cursor: default;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 16px;
+  height: 27px;
+  line-height: 27px;
+  min-width: 54px;
+  outline: 0;
+  padding: 0 8px;
+  background: rgb(240,240,240);
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.functionality-menu-list > li button.refresh {
+      opacity: .55;
+
+}
+.functionality-logo > h2 {
+  float: left;
+  text-align: left;
+  color: #d14836;
+  font-weight: normal;
+  font-size: 24px;
+  padding-left: 30px;
+  padding-right: 136px;
+}
+
+.functionality-pagination-settings {
+  float: right;
+  position: relative;
+  top: 10px;
+  left: 150px;
+}
+.functionality-pagination-settings > li {
+  float: left;
+}
+.functionality-pagination-settings > li:last-child{
+  margin-left: 15px;
+}
+.functionality-pagination-settings > li > button {
+  padding: 6px 15px;
+  background: rgb(240,240,240);
+  border-radius: 2px;
+  border: 1px solid #ccc;
+
+}
+main section.sidebar {
+  width: 210px;
+  margin-right: 1px;
+  float: left;
+  min-height: 220px;
+  font-size: 80%;
+}
+
+
+main section.sidebar button {
+  min-width: 115px;
+  background-color: #d14836;
+  border: 1px solid transparent;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  cursor: default;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  height: 29px;
+  line-height: 27px;
+  padding: 0 8px;
+  margin: 10px 33px 10px 33px;
+}
+.sidebar .folder {
+  margin-left: 15px;
+}
+
+.sidebar .folder li a:hover {
+  background-color: rgb(237,237,237);
+}
+.sidebar .folder li a{
+  display: block;
+  padding: 5px 20px;
+  position: relative;
+  margin-right: 20px;
+  color: black;
+  padding-left: 18px;
+}
+
+.sidebar .folder li a strong {
+  font-weight: bold;
+}
+.sidebar .folder li.selected a {
+  color: #d14836;
+}
+main section.main {
+  overflow: hidden;
+  background-color: white;
+  font-size: 80%;
+
+  min-height: 741px;
+  overflow: scroll;
+}
+
+main section.main form.create-email {
+  margin-left: 210px;
+  border: 2px solid gray;
+}
+main section.main form.create-email > input {
+  border: 0px solid;
+  height: 41px;
+  font-size: 13px;
+  background: transparent;
+  min-width: 470px;
+  max-width: 1056px;
+}
+main section.main form.create-email > input:focus {
+  outline: none
+}
+
+main section.main form.create-email > nav {
+  background-color: #404040;
+  color: white;
+  height: 30px;
+  vertical-align: middle;
+}
+
+main section.main form.create-email nav > span{
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px 0 0 6px;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+}
+main section.main form.create-email textarea#email_body {
+  min-height: 551px;;
+  width: 549px;
+  z-index: -2;
+  border: 0px;
+  resize: none;
+  outline: none;
+  font-size: 13px;
+}
+
+main section.main form.create-email footer.email-form-footer {
+  border-top:  1px solid rgb(237,237,237);
+  background-color: #e5e5e5;
+  height: 44px;
+}
+main section.main form.create-email footer.email-form-footer button {
+  background-color: #4d90fe;
+  border: 1px solid #3079ed;
+  color: #fff;
+  border-radius: 2px;
+  cursor: default;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  height: 27px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 8px;
+}
+
+.chatbox {
+    position: fixed;
+    position: expression("absolute");
+    width: 280px;
+    display: none;
+}
+
+.chatboxhead {
+    background: #666;
+    color: white;
+    padding: 0.5rem;
+    overflow: hidden;
+
+    border-right: 1px solid rgba(85, 85, 85, 0.87);
+    border-left: 1px solid rgba(85, 85, 85, 0.87);
+}
+
+.chatboxhead h1 {
+    display: inline;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.chatboxblink {
+    background-color: #176689;
+    border-right: 1px solid #176689;
+    border-left: 1px solid #176689;
+}
+
+.chatboxcontent {
+    font-family: arial, sans-serif;
+    height: 280px;
+    width: 280px;
+    overflow-y: auto;
+    padding: 7px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #eeeeee;
+    background: #e5e5e5;
+    line-height: 1.3em;
+    list-style: none;
+}
+
+.chatboxcontent li {
+    padding: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.chatboxcontent .avatar {
+    width: 40px;
+    position: relative;
+}
+
+.chatboxcontent .avatar img {
+    display: block;
+    width: 100%;
+}
+
+.other .avatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.self {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.self .chatboxmessagecontent {
+    order: 1;
+    border-bottom-right-radius: 0;
+}
+
+.self .avatar {
+    order: 2;
+}
+
+.self .avatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.chatboxmessagecontent {
+    background: white;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.chatboxmessagecontent p {
+    font-size: 12px;
+    margin: 0 0 0.2rem 0;
+    -ms-word-break: break-all;
+
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.chatboxmessagecontent time {
+    font-size: 9px;
+    color: #ccc;
+}
+
+.chatboxinput {
+    padding: 5px;
+    background-color: #ffffff;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.chatboxtextarea {
+    width: 262px;
+    height: 44px;
+    padding: 3px 0pt 3px 3px;
+    border: 1px solid #eeeeee;
+    margin: 1px;
+    overflow: hidden;
+    resize: none !important;
+}
+
+.chatboxtextareaselected {
+    border: 2px solid #878787;
+    margin: 0;
+}
+
+.chatboxmessage {
+    margin-left: 1em;
+}
+
+.chatboxinfo {
+    margin-left: -1em;
+    color: #666666;
+
+}
+
+.chatboxoptions {
+    float: right;
+}
+
+.chatboxoptions a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.chatboxtitle {
+    float: left;
+}

@@ -1,0 +1,112 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+
+Gina Jeong
+Detailed project Proposal for Gmail
+Users will be able to
+	•	Create accounts
+	•	Create sessions (log in)
+	•	Create emails
+	•	View emails
+	•	Send/receive emails
+	•	Search for emails
+	•	Assign their emails to appropriate categories
+	•	Create contacts
+Phase 1: User Authentication, database and Model creation
+In this phase, I hope to have user creation, user authentication, database creation and a skeleton of the models and controllers on the rails side and the models and collections on the backbone side. Here, we need to implement at least the basic functionality so that we can go to phase 2.
+Rails
+Models
+	•	User
+	•	Email
+	•	Category
+	•	Reply
+Controllers
+	•	UsersController (create, new)
+	•	RepliesController(create, new, update)
+	•	SessionsController (create, new, destroy)
+	•	EmailsController (create, new, show, destroy, update)
+	•	CategoriesController (create, new, index)
+Views
+	•	users/new.html.erb
+	•	session/new.html.erb
+	•	email/new.html.erb
+	•	replies/new.html.erb
+	•	category/show.html.erb
+Backbone
+Models
+	•	User
+	•	Email has nested replies
+Collections
+	•	User
+	•	Email
+View
+	•	User View
+	•	Index (displays all emails, this will have a composite view of individual email)
+	•	Show (displays email and its thread)
+	•	Create View
+	•	Update for saved draft
+Templates
+	•	User
+	•	Email (Index, new, show)
+	•	Category or sidemenu ( template for each sidemenu category)
+	•	Search bar
+	•	Top menu template
+Phase 2: Viewing Emails and Email threads and menus
+Here we focus on the router and views. By the end of this phase we should be able to see and access the pages in the browser so that we can add functionality in the next phase. This phase will focus on templates, views and relevant code in the router. The index page will have a list of all the emails and each email show page will have the email thread.
+Models
+Controllers
+Api::EmailController (create, destroy, index, show)
+Views
+	•	emails/show.json.jbuilder
+	•	emails/index.json.builder
+	•	emails’/_email.json.builder
+Backbone
+Models
+Collections
+Views
+Gems/Libraries
+
+Details
+Phase 3: Add functionality( send and receive emails)
+Here we add functionality to our views. We must be able to create and send email, create and update drafts, delete email threads, refresh, reply to/reply to All functionality, etc I will need to look up how to send and receive emails. This phase will heavily implement listenTo and events.
+Phase 4: Search Functionality
+There will be a search bar template created from earlier phases. This will perhaps use regex and backbone to fetch emails that satisfies the search query
+Phase 5: CSS and presentability
+This phase will focus on CSS selectors. Not only will it try to clone the gmail layout but also it will implement any drop down menus and give more links and buttons the similar shape as gmail.
+Phase 6: Refining and adding more features
+
+Bonus Features (TBD)
+	•	marked as read and starred, report as spam
+	•	 Contacts
+	•	 Pagination/infinite scroll
+	•	 last logged in
+	•	 tasks
+	•	 Multiple sessions/session management
+	•
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
