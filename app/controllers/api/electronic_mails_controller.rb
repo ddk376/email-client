@@ -3,9 +3,9 @@ class Api::ElectronicMailsController < ApplicationController
   wrap_parameters false
 
   def index
-    @emails = current_user.received_emails.where(is_draft: "false").page(params[:page])
-
-    render json: {:models => @emails, :page => params[:page], :total_pages => @emails.total_pages}
+    @emails = current_user.received_emails.where(is_draft: "false") #.page(params[:page])
+    render json: @emails
+    #render json: {:models => @emails, :page => params[:page], :total_pages => @emails.total_pages}
   end
 
   def create

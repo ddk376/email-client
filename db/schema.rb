@@ -84,16 +84,6 @@ ActiveRecord::Schema.define(version: 20150925040418) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
-  create_table "received_emails", force: :cascade do |t|
-    t.integer  "receiver_id", null: false
-    t.integer  "email_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "received_emails", ["email_id"], name: "index_received_emails_on_email_id", using: :btree
-  add_index "received_emails", ["receiver_id"], name: "index_received_emails_on_receiver_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
     t.string   "password_digest", null: false
